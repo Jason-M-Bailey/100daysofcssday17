@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 Days CSS Challenge #17</title>
+    <style>
+      .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 2px;
+        box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background: #fff;
+        color: #333;
+        font-family: "Open Sans", Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .top {
+        width: 100%;
+        height: 50%;
+        background: #444;
+      }
+
+      .bottom {
+        width: 100%;
+        height: 50%;
+        background: #37d493;
+      }
+
+      .eclipse {
+        position: absolute;
+        height: 100%;
+        width: 105%;
+        transform-style: preserve-3d;
+        top: 0;
+        left: -10px;
+        z-index: 2;
+        animation: elip 5s ease-in-out infinite;
+      }
+
+      .grey {
+        background: #444;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: rotatex(0);
+        z-index: 2;
+        border-radius: 50%;
+        backface-visibility: hidden;
+      }
+
+      .green {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        top: 0;
+        transform: rotatex(180deg);
+        left: -10px;
+        z-index: 1;
+        background: #37d493;
+        border-radius: 50%;
+        backface-visibility: hidden;
+      }
+
+      @keyframes elip {
+        0% {
+          transform: rotatex(90deg);
+        }
+        15% {
+          transform: rotatex(150deg);
+        }
+        20% {
+          transform: rotatex(50deg);
+        }
+        25% {
+          transform: rotatex(120deg);
+        }
+        30% {
+          transform: rotatex(70deg);
+        }
+        35% {
+          transform: rotatex(100deg);
+        }
+        40% {
+          transform: rotatex(83deg);
+        }
+        45% {
+          transform: rotatex(93deg);
+        }
+        50% {
+          transform: rotatex(90deg);
+        }
+        65% {
+          transform: rotatex(30deg);
+        }
+        70% {
+          transform: rotatex(130deg);
+        }
+        75% {
+          transform: rotatex(60deg);
+        }
+        80% {
+          transform: rotatex(110deg);
+        }
+        85% {
+          transform: rotatex(80deg);
+        }
+        90% {
+          transform: rotatex(97deg);
+        }
+        95% {
+          transform: rotatex(87deg);
+        }
+        100% {
+          transform: rotatex(90deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="eclipse">
+        <div class="grey"></div>
+        <div class="green"></div>
+      </div>
+    </div>
+  </body>
+</html>
